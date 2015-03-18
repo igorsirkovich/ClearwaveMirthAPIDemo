@@ -31,14 +31,13 @@ namespace ClearwaveMirthDemo {
     
         /// <remarks/>
         public ClearwaveMirthService() {
-            this.Url = "http://64.88.177.104:9001/services/ESE";
         }
     
         /// <remarks/>
         public event acceptMessageCompletedEventHandler acceptMessageCompleted;
     
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ws.connectors.connect.mirth.com/", ResponseNamespace="http://ws.connectors.connect.mirth.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://ws.connectors.connect.mirth.com/", ResponseNamespace="http://ws.connectors.connect.mirth.com/", Use=System.Web.Services.Description.SoapBindingUse.Encoded, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string acceptMessage([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string arg0) {
             object[] results = this.Invoke("acceptMessage", new object[] {
